@@ -61,6 +61,9 @@ enum Player{
       }
       if(diagonal1.every(cell => cell === Player.X)) return Player.X;
       if(diagonal1.every(cell => cell === Player.O)) return Player.O;
+      
+      if(diagonal2.every(cell => cell === Player.X)) return Player.X;
+      if(diagonal2.every(cell => cell === Player.O)) return Player.O;
   
       // Ci nahodou nemni remiza
       if(this.board.every(row => row.every(cell => cell !== null))) return Player.draw;
